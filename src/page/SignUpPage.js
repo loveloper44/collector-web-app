@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import LoginForm from '../component/auth/LoginForm';
+import SignUpForm from '../component/auth/SignUpForm';
 import Color from '../component/color/Color';
 
 const GlobalStyle = createGlobalStyle`
@@ -24,12 +24,12 @@ const Content = styled.div`
     padding:16px;
 `
 
-export default function LoginPage(props) {
+export default function SignUpPage(props) {
     return (
         <Container>
             <GlobalStyle />
             <Content >
-                <LoginForm />
+                <SignUpForm />
             </Content>
         </Container>
     )

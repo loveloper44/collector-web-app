@@ -1,10 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import SideMenu from '../component/common/side/SideMenu';
 import LinkPage from './LinkPage';
 import PagePage from './PagePage';
 import ProfilePage from './ProfilePage';
+import Color from '../component/color/Color';
+
+const GlobalStyle = createGlobalStyle`
+    body{
+        background: ${Color.white};
+    }
+`
 
 const Container = styled.div`
     display:flex;
@@ -20,6 +27,7 @@ const Content = styled.div`
 
 export default function MainPage(props) {
     return (<Container>
+        <GlobalStyle />
         <Aside>
             <SideMenu />
         </Aside>
