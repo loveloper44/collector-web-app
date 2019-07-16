@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-import { Grid } from 'semantic-ui-react';
 import SideMenu from '../component/common/side/SideMenu';
 import LinkPage from './LinkPage';
 import PagePage from './PagePage';

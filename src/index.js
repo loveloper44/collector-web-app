@@ -8,7 +8,6 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import { configureStore } from './module';
 import App from './App';
-import 'semantic-ui-css/semantic.min.css';
 
 const history = createBrowserHistory();
 const store = configureStore(history);

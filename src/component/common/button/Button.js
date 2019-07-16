@@ -1,9 +1,7 @@
 import styled from 'styled-components';
-import { Button } from 'semantic-ui-react'
 import Color from '../../color/Color'
 
-const PointButton = styled(Button)`
-&&&{
+const Button = styled.button`
     color:white;
     background-color:${Color.point};
     &:hover{
@@ -15,6 +13,5 @@ const PointButton = styled(Button)`
         color:white;
         background-color:${Color.point};
     }
-}
 `
-export default PointButton;
+export default Button;

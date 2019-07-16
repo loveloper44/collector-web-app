@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Form, Button } from 'semantic-ui-react';
-import PointButton from '../common/button/PointButton';
 
 const StyledContainer = styled.div`
     padding:16px;
@@ -20,15 +18,8 @@ export default function AddLink(props) {
 
 
     return <StyledContainer>
-        <Form>
-            <Form.Field>
-                <label>Add Link</label>
-                <input placeholder='First Name' />
-            </Form.Field>
+        <div>
 
-            <ButtonContainer >
-                <PointButton type='submit'>Next</PointButton>
-            </ButtonContainer>
-        </Form>
+        </div>
     </StyledContainer>
 }
