@@ -1,63 +1,63 @@
 import React from 'react';
 import styled from 'styled-components';
+import Color from '../../color/Color';
 
-const StyledPreview = styled.div`
-    height:72px;
-    box-sizing:border-box;
+const LinkView = styled.div`
+    padding:16px;
+    display:flex;
+    box-shadow: 2px 2px 5px #DEDEDE;
+    transition: all .2s ease-in-out;
+
     &:hover{
+        transform: scale(1.03);
         cursor:pointer;
-        box-shadow:2px 2px 5px #ccc;
     }
 
-    &::after{
-        display: block;
-        content: '';
-        clear: both;
-    }
-
-    .image{
-        float:left;
-        width:72px;
-        height:72px;
-        background-image: url(${props => props.image});
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 72px 72px;
+    img{
+        width:91px;
+        height:91px;
+        margin-right:16px;
     }
 
     .content{
-        float:left;
-        height:72px;
-        padding:8px;
-        box-sizing:border-box;
+        overflow: hidden;
+        .url{
+            margin-top:12px;
+            a{
+                font-size: 1rem;
+                text-decoration: none;
+                color:gray;
+                transition: all .2s ease-in-out;
+            }
+        }
+        h2{
+            margin:0;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+        p{
+            margin-top:12px;
+            margin-bottom:0;
+            color:gray;
+            font-size: 1rem;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            transition: all .2s ease-in-out;
+        }
     }
 
-    .title{
-        color:black;
-        font-size:15px;
-        font-weight:bold;
-    }
-    .description{
-        color:gray;
-        font-size:13px;
-        padding: 4px 0;
-    }
-    .url{
-        color:#999;
-        font-size:10px;
-    }
 `
 
 export default function Link(props) {
     const { image, title, description, url } = props;
-    return <StyledPreview image={image}>
-        <div className='image'>
-
-        </div>
+    return <LinkView >
+        <img src={image} />
         <div className='content'>
-            <div className="title">{title}</div>
-            <div className="description">{description}</div>
-            <div className="url">{url}</div>
+            <h2>{title}</h2>
+            <p >{description}</p>
+            <div className="url"><a href={url}>{url}</a></div>
         </div>
-    </StyledPreview>
+    </LinkView>
 } 

@@ -1,16 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import LinkList from '../component/link/LinkList';
-import AddLink from '../component/link/AddLink';
-
-const Container = styled.div`
-    padding:16px;
-    max-width:700px;
-`
+import AddLinkForm from '../component/link/AddLinkForm';
+import { Container, Col, Row } from 'react-grid-system';
 
 export default function LinkPage(props) {
+
+
     return (<Container>
-        <AddLink />
-        <LinkList />
+        <Row>
+            <Col sm={6}>
+                <LinkList />
+            </Col>
+            <Col sm={6}>
+                <AddLinkForm link />
+            </Col>
+        </Row>
     </Container>)
 }

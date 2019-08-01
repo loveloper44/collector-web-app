@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Link from './Link';
 
 const List = styled.div`
-    margin-top: 32px;
 `
 const ListItem = styled.div`
     margin-bottom:10px;

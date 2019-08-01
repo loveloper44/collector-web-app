@@ -3,25 +3,20 @@ import Color from '../../color/Color';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    background:linear-gradient(${Color.primary}, ${Color.secondary});
-    height:100vh;
-`
-
-const Title = styled.h2`
-    padding: 16px;
-    margin:0px;
-    color:${Color.white};
 `
 
 const MenuItem = styled.div`
     overflow:hidden;
     padding: 16px;
     font-size:1.1rem;
+    font-weight:bold;
     color: ${Color.white};
-    background-color:${Color.primary};
-    border-top: 1px solid #ddd;
+    background-color:${Color.dark};
+    border-bottom: 1px solid #ddd;
+    border-left:5px solid ${Color.dark};
+    transition: all .2s ease-in-out;
     &:hover{
-        background-color:${Color.darkPrimary};
+        border-left:5px solid white;
         cursor:pointer;
     }
 `
@@ -29,9 +24,6 @@ const MenuItem = styled.div`
 export default function SideMenu() {
     return (
         <Container>
-            <Title>
-                Lonnect
-            </Title>
             <MenuItem>
                 Link
             </MenuItem>

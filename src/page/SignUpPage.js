@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import SignUpForm from '../component/auth/SignUpForm';
-import Color from '../component/color/Color';
+import Color from '../color/Color';
 
 const GlobalStyle = createGlobalStyle`
     body{

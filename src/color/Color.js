@@ -1,7 +1,7 @@
 const Color = {
     primary: '#2E266C',
-    darkPrimary: '#454D66',
     secondary: '#78ffd6',
+    dark: '#17223b',
     point: 'crimson',
     white: 'white',
     black: 'black',
